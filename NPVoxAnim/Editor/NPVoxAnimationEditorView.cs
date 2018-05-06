@@ -928,7 +928,7 @@ public class NPVoxAnimationEditorView : Editor
                     if (!isEditing)
                     {
                         Handles.color = new Color(0.5f, 1.0f, 0.1f, 0.5f);
-                        Handles.CubeCap(0, position + anchorPos, rotation,  0.125f);
+                        Handles.CubeHandleCap(0, position + anchorPos, rotation,  0.125f, Event.current.type);
                         size = 10.0f;
                     }
                     Handles.color = Color.red;

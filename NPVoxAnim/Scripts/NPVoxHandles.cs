@@ -59,7 +59,7 @@ public class NPVoxHandles
             // if (isMouseDown)
             {
                 Handles.color = Color.yellow;
-                Handles.CubeCap(controlID, voxelCenter, Quaternion.identity, npVoxToUnity.VoxeSize.x * 2.0f);
+                Handles.CubeHandleCap(controlID, voxelCenter, Quaternion.identity, npVoxToUnity.VoxeSize.x * 2.0f, Event.current.type);
 //                SceneView.currentDrawingSceneView.Repaint();
             }
         }
@@ -280,7 +280,7 @@ public class NPVoxHandles
         //     Handles.color = Color.white;
         // }
 
-        Handles.DotCap(controlID, handlePosition, Quaternion.identity, npVoxToUnity.VoxeSize.x * 0.25f);
+        Handles.DotHandleCap(controlID, handlePosition, Quaternion.identity, npVoxToUnity.VoxeSize.x * 0.25f, Event.current.type);
 
         Vector3 screenPosition = Handles.matrix.MultiplyPoint(handlePosition);
 
@@ -337,7 +337,7 @@ public class NPVoxHandles
     {
         int controlID = GUIUtility.GetControlID(FocusType.Passive);
 
-        Handles.DotCap(controlID, handlePosition, Quaternion.identity, npVoxToUnity.VoxeSize.x * 0.25f);
+        Handles.DotHandleCap(controlID, handlePosition, Quaternion.identity, npVoxToUnity.VoxeSize.x * 0.25f, Event.current.type);
 
         Vector3 screenPosition = Handles.matrix.MultiplyPoint(handlePosition);
 

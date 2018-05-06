@@ -447,22 +447,22 @@ public class GNBlockMapEditorView : Editor
         if( inputController.IsErasingActive() )
         {
             Handles.color = new Color(128, 0, 0, 0.25f);
-            Handles.CubeCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize);
+            Handles.CubeHandleCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize, Event.current.type);
         }
         if( inputController.IsPrefabNavigationActive() )
         {
             Handles.color = new Color(128, 128, 0, 0.05f);
-            Handles.CubeCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize);
+            Handles.CubeHandleCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize, Event.current.type);
         }
         if( inputController.IsPickingActive() )
         {
             Handles.color = new Color(128, 128, 0, 0.25f);
-            Handles.CubeCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize);
+            Handles.CubeHandleCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize, Event.current.type);
         }
         if( inputController.IsRotationActive() )
         {
             Handles.color = new Color(0, 128, 0, 0.05f);
-            Handles.CubeCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize);
+            Handles.CubeHandleCap(controlID, viewModel.CurrentCell, Quaternion.identity, viewModel.CellSize, Event.current.type);
         }
         
         switch (eventType)

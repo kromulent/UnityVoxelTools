@@ -376,7 +376,7 @@ public class NPVoxTrailGenerator : NPVoxCompositeProcessorBase<NPVoxIModelFactor
                     Handles.color = Color.yellow;
                     break;
             }
-            Handles.CubeCap(0, pos, Quaternion.identity, 0.5f);
+            Handles.CubeHandleCap(0, pos, Quaternion.identity, 0.5f, Event.current.type);
         }
 
         // offset 
